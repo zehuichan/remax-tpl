@@ -1,22 +1,16 @@
-import * as React from 'react'
+import React, {useState} from 'react'
 import {getAuthCode, getAuthUserInfo} from 'remax/ali'
 
 export default function useUserInfo() {
-  const [userInfo, setUserInfo] = React.useState(null)
+  const [userInfo, setUserInfo] = useState(null)
 
-  function login() {
-    getAuthCode({
-      scopes: ['auth_user'],
-      success: (authcode) => {
-        console.log(authcode)
-        getAuthUserInfo({
-          success: (res) => {
-            console.log(res)
-            setUserInfo(res)
-          }
-        })
-      }
+  async function login() {
+    const authcode = await getAuthCode({
+      scopes: ['auth_user']
     })
+    console.log(authcode)
+    const res = getAuthUserInfo()
+    setUserInfo(res)
   }
 
   return [userInfo, login]
