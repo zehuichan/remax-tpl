@@ -11,7 +11,7 @@
     "start": "npm run dev",
     "dev": "remax build -t ali -w",
     "build": "cross-env NODE_ENV=production remax build -t ali",
-    "release": "standard-version && git push --follow-tags origin master"
+    "release": "release-it && git push --follow-tags origin master"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -23,11 +23,16 @@
   "devDependencies": {
     "@remax/plugin-less": "^1.0.0",
     "cross-env": "^7.0.2",
-    "standard-version": "^9.1.0"
+    "release-it": "^14.3.0"
   },
-  "standard-version": {
-    "skip": {
-      "changelog": true
+  "release-it": {
+    "npm": {
+      "publish": false
+    },
+    "git": {
+      "push": false,
+      "tagName": "v${version}",
+      "commitMessage": "chore: release v${version}"
     }
   }
 }
