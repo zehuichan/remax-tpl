@@ -11,7 +11,7 @@
     "start": "npm run dev",
     "dev": "remax build -t ali -w",
     "build": "cross-env NODE_ENV=production remax build -t ali",
-    "release": "release-it && git push --follow-tags origin master"
+    "release": "release-it && git push --follow-tags origin main"
   },
   "dependencies": {
     "clsx": "^1.1.1",
