@@ -8,7 +8,7 @@
   "author": "jasconchan <jasonchenzehui@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm run dev",
+    "start": "miniu dev",
     "dev": "remax build -t ali -w",
     "build": "cross-env NODE_ENV=production remax build -t ali",
     "release": "release-it && git push --follow-tags origin main"
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@remax/plugin-less": "^1.0.0",
     "cross-env": "^7.0.2",
+    "miniu": "^1.8.4",
     "release-it": "^14.3.0"
   },
   "release-it": {

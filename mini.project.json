@@ -19,7 +19,11 @@
   "precompileWatch": {
     "selfWatch": true,
     "restart": true,
-    "exclude": ["dist/**", "*.md"],
+    "exclude": [
+      "dist/**",
+      "*.md"
+    ],
     "ignoreBuiltInExts": false
-  }
+  },
+  "component2": true
 }
