@@ -3,6 +3,7 @@ import {useAppEvent} from 'remax/macro'
 import dva from 'remax-dva'
 
 // global css
+import 'annar/dist/annar.css';
 import '@/assets/less/index.less'
 
 const app = dva()

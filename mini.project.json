@@ -25,5 +25,5 @@
     ],
     "ignoreBuiltInExts": false
   },
-  "component2": true
+  "component2": false
 }
