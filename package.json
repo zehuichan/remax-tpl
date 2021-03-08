@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",
-    "dev": " remax build -t ali -w",
+    "dev": "cross-env NODE_ENV=development remax build -t ali -w",
     "build": "cross-env NODE_ENV=production remax build -t ali",
     "release": "release-it && git push --follow-tags origin main"
   },
@@ -17,7 +17,7 @@
     "annar": "^2.0.9",
     "clsx": "^1.1.1",
     "react": "^16.14.0",
-    "remax": "^2.11.5",
+    "remax": "^2.11.6",
     "remax-dva": "^2.1.0"
   },
   "devDependencies": {
