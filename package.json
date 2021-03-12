@@ -8,15 +8,15 @@
   "author": "jasconchan <jasonchenzehui@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm run dev",
+    "miniu": "miniu dev",
     "dev": "cross-env NODE_ENV=development remax build -t ali -w",
     "build": "cross-env NODE_ENV=production remax build -t ali",
     "release": "release-it && git push --follow-tags origin main"
   },
   "dependencies": {
     "annar": "^2.0.9",
-    "babel-polyfill": "^6.26.0",
     "clsx": "^1.1.1",
+    "core-js": "^3.9.1",
     "mobx": "^6.1.8",
     "mobx-react": "^7.1.0",
     "react": "^16.14.0",

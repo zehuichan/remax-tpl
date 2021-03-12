@@ -1,4 +1,5 @@
-import 'babel-polyfill'
+// with polyfills
+import 'core-js/stable'
 import * as React from 'react'
 import { useAppEvent } from 'remax/macro'
 import { useLocalStore } from 'mobx-react'
@@ -25,7 +26,7 @@ const App = ({ children }) => {
   })
 
   return (
-    <storeContext.Provider value={{ userStore }}>
+    <storeContext.Provider value={{ ...userStore }}>
       {children}
     </storeContext.Provider>
   )
