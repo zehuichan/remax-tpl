@@ -1,14 +1,15 @@
-import React from 'react'
-import {useAppEvent} from 'remax/macro'
-import dva from 'remax-dva'
+import * as React from 'react'
+import { useAppEvent } from 'remax/macro'
+import { useLocalStore } from 'mobx-react'
+import { storeContext } from './hooks/useStores'
+import createUserStore from './store/modules/user'
 
 // global css
-import 'annar/dist/annar.css';
+import 'annar/dist/annar.css'
 import '@/assets/less/index.less'
 
-const app = dva()
-
-const App = app.start(({ children }) => {
+const App = ({ children }) => {
+  const userStore = useLocalStore(createUserStore)
 
   useAppEvent('onLaunch', () => {
     console.log('app onLaunch')
@@ -22,7 +23,11 @@ const App = app.start(({ children }) => {
     console.log('app onHide')
   })
 
-  return children
-})
+  return (
+    <storeContext.Provider value={{ userStore }}>
+      {children}
+    </storeContext.Provider>
+  )
+}
 
 export default App
