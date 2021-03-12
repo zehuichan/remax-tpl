@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import * as React from 'react'
 import { useAppEvent } from 'remax/macro'
 import { useLocalStore } from 'mobx-react'
