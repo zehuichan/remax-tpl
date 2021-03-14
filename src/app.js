@@ -1,18 +1,13 @@
-// with polyfills
-import 'core-js/stable'
 import * as React from 'react'
 import { useAppEvent } from 'remax/macro'
-import { useLocalStore } from 'mobx-react'
-import { storeContext } from './hooks/useStores'
-import createUserStore from './store/modules/user'
+import { Provider } from 'mobx-react'
+import store from './store'
 
 // global css
 import 'annar/dist/annar.css'
 import '@/assets/less/index.less'
 
 const App = ({ children }) => {
-  const userStore = useLocalStore(createUserStore)
-
   useAppEvent('onLaunch', () => {
     console.log('app onLaunch')
   })
@@ -26,9 +21,9 @@ const App = ({ children }) => {
   })
 
   return (
-    <storeContext.Provider value={{ ...userStore }}>
+    <Provider {...store}>
       {children}
-    </storeContext.Provider>
+    </Provider>
   )
 }
 

@@ -1,15 +1,13 @@
 import * as React from 'react'
 import './index.less'
-import {usePageEvent} from 'remax/macro'
-import useUserInfo from '@/hooks/useUserInfo'
-import {View} from 'remax/ali'
-import RAuth from '@/components/RAuth'
-import DemoCard from '@/components/DemoCard'
-import DemoBlock from '@/components/DemoBlock'
+import { usePageEvent } from 'remax/macro'
+import { View } from 'remax/ali'
 import RBadge from '@/components/RBadge'
 
-const Components = () => {
-  const [user, login] = useUserInfo()
+import { inject, observer } from 'mobx-react'
+
+const Components = (props) => {
+  console.log(props)
 
   usePageEvent('onShow', () => {
     console.log('page onShow')
@@ -27,4 +25,4 @@ const Components = () => {
   )
 }
 
-export default Components
+export default inject('userStore')(observer(Components))
