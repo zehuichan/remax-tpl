@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "miniu": "miniu dev",
-    "dev": "cross-env NODE_ENV=development remax build -t ali -w",
+    "dev": "cross-env NODE_ENV=development remax build -t ali -w -m",
     "build": "cross-env NODE_ENV=production remax build -t ali",
     "release": "release-it && git push --follow-tags origin main"
   },
@@ -17,8 +17,8 @@
     "annar": "^2.0.9",
     "clsx": "^1.1.1",
     "core-js": "^3.9.1",
-    "mobx": "^5.14.2",
-    "mobx-react": "^6.1.4",
+    "mobx": "5.14.2",
+    "mobx-react": "6.1.4",
     "react": "^16.14.0",
     "remax": "^2.11.6"
   },

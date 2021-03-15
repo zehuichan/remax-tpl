@@ -1,13 +1,21 @@
-import * as React from 'react'
+import React from 'react'
 import './index.less'
 import { usePageEvent } from 'remax/macro'
-import { View } from 'remax/ali'
-import RBadge from '@/components/RBadge'
+import { View, navigateTo } from 'remax/ali'
+import { Button } from 'annar'
 
-import { inject, observer } from 'mobx-react'
+import { observer } from 'mobx-react'
+import useStores from '@/hooks/useStores'
 
-const Components = (props) => {
-  console.log(props)
+export default observer((props) => {
+  const { userStore } = useStores()
+  const handleAdd = () => {
+    userStore.add()
+  }
+  const onAction = (type, row) => {
+    console.log(type, row)
+    navigateTo({ url: '/pages-a/testA/index' })
+  }
 
   usePageEvent('onShow', () => {
     console.log('page onShow')
@@ -20,9 +28,8 @@ const Components = (props) => {
   return (
     <View className="components">
       <View>陈泽辉</View>
-      <RBadge>123</RBadge>
+      <Button onTap={handleAdd}>{userStore.state.count}</Button>
+      <Button onTap={() => onAction('detail', 'jasonchenzehui')}>跳转</Button>
     </View>
   )
-}
-
-export default inject('userStore')(observer(Components))
+})

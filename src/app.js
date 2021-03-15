@@ -1,7 +1,5 @@
-import * as React from 'react'
+import React from 'react'
 import { useAppEvent } from 'remax/macro'
-import { Provider } from 'mobx-react'
-import store from './store'
 
 // global css
 import 'annar/dist/annar.css'
@@ -20,11 +18,7 @@ const App = ({ children }) => {
     console.log('app onHide')
   })
 
-  return (
-    <Provider {...store}>
-      {children}
-    </Provider>
-  )
+  return children
 }
 
 export default App

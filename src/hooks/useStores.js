@@ -1,9 +1,8 @@
-import * as React from 'react'
-
-export const storeContext = React.createContext(null)
+import React from 'react'
+import store from '@/store'
 
 const useStores = () => {
-  return React.useContext(storeContext)
+  return React.useContext(store)
 }
 
 export default useStores

@@ -1,11 +1,17 @@
-import { observable, action, computed } from 'mobx'
+import { observable, action } from 'mobx'
 
 class createStore {
   @observable
   state = {
     avatar: '',
     name: 'chenzehui',
-    phone: '15800066380'
+    phone: '15800066380',
+    count: 0
+  }
+
+  @action
+  add() {
+    this.state.count++
   }
 }
 

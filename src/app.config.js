@@ -3,6 +3,14 @@ module.exports = {
     'pages/tabs/components/index',
     'pages/tabs/api/index',
   ],
+  subPackages: [
+    {
+      root: 'pages-a',
+      pages: [
+        'testA/index'
+      ]
+    }
+  ],
   window: {
     defaultTitle: 'remaxjs ali tpl',
     navigationBarBackgroundColor: '#282c34'
