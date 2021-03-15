@@ -9,7 +9,8 @@
   "license": "MIT",
   "scripts": {
     "miniu": "miniu dev",
-    "dev": "cross-env NODE_ENV=development remax build -t ali -w -m",
+    "dev": "cross-env NODE_ENV=development remax build -t ali -w",
+    "stage": "cross-env NODE_ENV=production remax build -t ali -w -m",
     "build": "cross-env NODE_ENV=production remax build -t ali",
     "release": "release-it && git push --follow-tags origin main"
   },

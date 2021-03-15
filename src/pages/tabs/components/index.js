@@ -17,12 +17,12 @@ export default observer((props) => {
     navigateTo({ url: '/pages-a/testA/index' })
   }
 
-  usePageEvent('onShow', () => {
-    console.log('page onShow')
-  })
-
   usePageEvent('onLoad', () => {
     console.log('page onLoad')
+  })
+
+  usePageEvent('onShow', () => {
+    console.log('page onShow')
   })
 
   return (
