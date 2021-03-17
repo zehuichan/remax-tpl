@@ -21,13 +21,13 @@
     "mobx": "5.14.2",
     "mobx-react": "6.1.4",
     "react": "^16.14.0",
-    "remax": "^2.11.6"
+    "remax": "^2.11.7"
   },
   "devDependencies": {
     "@remax/plugin-less": "^1.0.0",
-    "babel-preset-remax": "^2.11.6",
+    "babel-preset-remax": "^2.11.7",
     "cross-env": "^7.0.2",
-    "miniu": "^1.9.2",
+    "miniu": "^1.9.5",
     "release-it": "^14.4.1"
   },
   "release-it": {
