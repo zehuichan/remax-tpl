@@ -1,4 +1,4 @@
-import {request, showToast, showAlert} from 'remax/ali'
+import {request, showToast} from 'remax/ali'
 // utils
 import Cache from './cache'
 
