@@ -15,20 +15,20 @@
     "release": "release-it && git push --follow-tags origin main"
   },
   "dependencies": {
-    "annar": "^2.0.9",
+    "annar": "^2.1.0",
     "clsx": "^1.1.1",
-    "core-js": "^3.11.0",
+    "core-js": "^3.15.1",
     "mobx": "5.14.2",
     "mobx-react": "6.1.4",
     "react": "^16.14.0",
-    "remax": "^2.13.1"
+    "remax": "^2.13.6"
   },
   "devDependencies": {
     "@remax/plugin-less": "^1.0.0",
-    "babel-preset-remax": "^2.13.1",
+    "babel-preset-remax": "^2.13.6",
     "cross-env": "^7.0.2",
-    "miniu": "^1.13.1",
-    "release-it": "^14.6.1"
+    "miniu": "^1.16.0",
+    "release-it": "^14.10.0"
   },
   "release-it": {
     "npm": {
